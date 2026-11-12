@@ -84,13 +84,21 @@ public class InnerAssignmentCheck extends AbstractCheck {
         {TokenTypes.VARIABLE_DEF},
         {TokenTypes.EXPR, TokenTypes.ELIST, TokenTypes.FOR_INIT},
         {TokenTypes.EXPR, TokenTypes.ELIST, TokenTypes.FOR_ITERATOR},
-        {TokenTypes.ANNOTATION_MEMBER_VALUE_PAIR}, {
-            TokenTypes.RESOURCE,
-            TokenTypes.RESOURCES,
-            TokenTypes.RESOURCE_SPECIFICATION,
-        },
-        {TokenTypes.EXPR, TokenTypes.LAMBDA},
+        {TokenTypes.ANNOTATION_MEMBER_VALUE_PAIR},
+        {TokenTypes.RESOURCE, TokenTypes.RESOURCES, TokenTypes.RESOURCE_SPECIFICATION},
         {TokenTypes.EXPR, TokenTypes.SWITCH_RULE, TokenTypes.LITERAL_SWITCH, TokenTypes.SLIST},
+    
+        // switch used as an unbraced statement body
+        {TokenTypes.EXPR, TokenTypes.SWITCH_RULE, TokenTypes.LITERAL_SWITCH,
+            TokenTypes.LITERAL_IF},
+        {TokenTypes.EXPR, TokenTypes.SWITCH_RULE, TokenTypes.LITERAL_SWITCH,
+            TokenTypes.LITERAL_WHILE},
+        {TokenTypes.EXPR, TokenTypes.SWITCH_RULE, TokenTypes.LITERAL_SWITCH,
+            TokenTypes.LITERAL_FOR},
+        {TokenTypes.EXPR, TokenTypes.SWITCH_RULE, TokenTypes.LITERAL_SWITCH,
+            TokenTypes.LITERAL_DO},
+        {TokenTypes.EXPR, TokenTypes.SWITCH_RULE, TokenTypes.LITERAL_SWITCH,
+            TokenTypes.LABELED_STAT},
     };
 
     /**
